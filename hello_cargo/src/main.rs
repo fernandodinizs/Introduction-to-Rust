@@ -11,3 +11,4 @@ fn main() { // incio escopo
 
     println!("total: {} segundos", total_in_seconds);
 }
+
