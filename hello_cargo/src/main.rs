@@ -1,35 +1,13 @@
+
+const SECONDS_IN_MINUTE: u32 = 60; // constante de segundos em um minuto
+const MINUTES_IN_HOUR: u32 = 60; // constante de minutos em uma hora
+const SECONDS_IN_HOUR: u32 = SECONDS_IN_MINUTE * MINUTES_IN_HOUR; // constante de segundos em uma hora
+
+
 fn main() { // incio escopo
-    let mut total = 30; //mut deixa a variavel mutavel  
-    let segundos = 60.20;
+   
+    let total = 30; 
+    let total_in_seconds = total * SECONDS_IN_HOUR; // calculando o total em segundos
 
-    println!("total: {} horas, e {} segundos", total, segundos);
-
-    {
-        let total = total + 20 ; // com as chaves tudo feito dentro delas não muda fora
-        println!("total: {} horas", total);
-    }
-
-    total = 40;
-    println!("total: {} horas", total);
-    
-    let total = "quarente"; //para redefinir a tipagem da variavel é preciso redefinir a variavel com let   
-    println!("total: {} horas", total);
+    println!("total: {} segundos", total_in_seconds);
 }
-
-// i32 = inteiro de 32 bits
-// f64 = ponto flutuante de 64 bits
-//let total: i32 = 30;
-// let segundos: f64 = 60.20;
-
-
-// é possivel definir o sugb escopo com:
-
-// {
-//     let total = 50;
-// }
-
-// ou:
-
-// fn inner() {
-//     let total = 50;
-// }
